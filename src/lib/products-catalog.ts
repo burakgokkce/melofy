@@ -64,11 +64,11 @@ const IMAGE_IDS: string[] = [
   "1516924962500-2b4b3b99ea02", // duvar gitarları (semi-hollow vitrin)
   "1470225621710-d075e2c2d8d6", // teller / aksesuar hissi
   "1516280443064-f78e1989c8fa", // çanta / sahne ekipmanı
-  "1514525253161-7a46d19cd819", // nota / sehpa ortamı
+  "1550985616-10810253b84d", // Hercules tipi gitar standı yerine gitar+stand bağlamı (kombo)
   "1558618666-fcd25c85cd64", // pedal tahtası
   "1763889553133-fa80b1ee404c", // efekt pedalları
-  "1571115764585-a42ed8ff922d", // stüdyo kabini / rack ortamı
-  "1511379938547-c1f69419868d", // gitar duvarı (modelleme ünitesi vitrin)
+  "1571115764585-a42ed8ff922d", // Helix LT — stüdyo/rack ortamı
+  "1616533719060-a7fc492e9299", // Kemper — amfi / rack hissi
   "1585562918855-cc7c760a8dcf", // ses kartı / arabirim hissi
   "1511371482916-0d04efd19f8a", // kayıt ortamı
   "1484704849700-f032a568e944", // monitör / kulaklık dinleme

@@ -12,7 +12,10 @@ export function Header() {
           href="/"
           className="flex min-w-0 flex-col gap-0.5 rounded-md ring-offset-2 ring-offset-transparent transition hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/30 sm:gap-1"
         >
-          <MelofyLogo className="text-[1.7rem] sm:text-[1.95rem] lg:text-[2.2rem]" />
+          <MelofyLogo
+            priority
+            className="h-10 max-h-10 w-auto max-w-[min(280px,58vw)] shrink-0 sm:h-11 sm:max-h-11 sm:max-w-[min(320px,48vw)] lg:h-[3.25rem] lg:max-h-[3.25rem] lg:max-w-[min(380px,42vw)]"
+          />
           <SloganTagline variant="header" className="pl-[0.18em]" />
           <span className="sr-only">MELOFY — ana sayfa</span>
         </Link>

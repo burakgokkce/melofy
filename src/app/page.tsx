@@ -4,8 +4,16 @@ import { SloganTagline } from "@/components/brand/SloganTagline";
 import { ProductCard } from "@/components/ProductCard";
 import { featuredProducts, nav } from "@/lib/site";
 
+/**
+ * Hero & yan görsellerin tamamı kataloğun da kullandığı Unsplash kimlikleri
+ * üzerinden geliyor; güvenilir yüklenmesi için hepsi bilinir id’ler.
+ */
 const heroImage =
-  "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=85";
+  "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=1500&q=85";
+const heroAccentTop =
+  "https://images.unsplash.com/photo-1571115764585-a42ed8ff922d?auto=format&fit=crop&w=520&q=80";
+const heroAccentBottom =
+  "https://images.unsplash.com/photo-1519640350407-953bc0614f4c?auto=format&fit=crop&w=520&q=80";
 
 const pillars = [
   {
@@ -78,78 +86,36 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-accent-violet/15 via-transparent to-accent-coral/15 blur-2xl" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-zinc-200 shadow-[0_24px_60px_-20px_rgba(36,52,52,0.32)] ring-1 ring-black/5">
+            <div className="absolute -inset-6 rounded-[2.25rem] bg-gradient-to-br from-accent-violet/20 via-accent-coral/10 to-accent-cyan/15 blur-3xl" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-zinc-200 shadow-[0_30px_70px_-22px_rgba(36,52,52,0.38)] ring-1 ring-black/5">
               <Image
                 src={heroImage}
-                alt="Gitar çalan müzisyen — MELOFY atmosferi"
+                alt="Küratörlü enstrüman vitrini — MELOFY mağaza"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 480px"
-                className="object-cover object-[center_30%]"
+                sizes="(max-width: 1024px) 100vw, 520px"
+                className="object-cover object-[center_45%]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-              <p className="absolute bottom-5 left-5 right-5 text-sm font-medium text-white/95 drop-shadow-md">
-                Gerçek ilan fotoğraflarıyla güven veren vitrin.
-              </p>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-black/0 to-black/0" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-        <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          Üç boyut
-        </h2>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
-          Mağaza, akademi ve topluluk — aynı marka altında birbirini besleyen
-          üç sütun.
-        </p>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {pillars.map((p) => (
-            <Link
-              key={p.href}
-              href={p.href}
-              className="group flex flex-col rounded-2xl border border-line-soft bg-card p-7 shadow-[0_1px_0_rgba(17,12,34,0.04)] transition hover:-translate-y-0.5 hover:border-line-strong hover:shadow-lg"
-            >
-              <span
-                className={`inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${p.hue} text-base font-bold text-white shadow-md`}
-              >
-                {p.title.slice(0, 1)}
-              </span>
-              <h3 className="font-display mt-5 text-xl font-semibold tracking-tight text-foreground group-hover:text-accent-deep">
-                {p.title}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                {p.body}
-              </p>
-              <span className="mt-5 text-sm font-semibold text-accent-violet">
-                İncele →
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-y border-line-soft bg-gradient-to-b from-accent-violet/[0.05] to-transparent">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Neden işe yarar?
-          </h2>
-          <div className="mt-12 grid gap-8 sm:grid-cols-3">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="rounded-2xl bg-white/90 p-7 shadow-sm ring-1 ring-line-soft"
-              >
-                <p className="font-display text-lg font-semibold text-accent-coral">
-                  {v.title}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {v.text}
-                </p>
-              </div>
-            ))}
+            <div className="pointer-events-none absolute -right-6 -top-6 hidden h-28 w-28 overflow-hidden rounded-2xl ring-2 ring-white/90 shadow-xl lg:block">
+              <Image
+                src={heroAccentTop}
+                alt="Stüdyo atmosferi"
+                fill
+                sizes="112px"
+                className="object-cover"
+              />
+            </div>
+            <div className="pointer-events-none absolute -bottom-8 -left-6 hidden h-32 w-32 overflow-hidden rounded-2xl ring-2 ring-white/90 shadow-xl lg:block">
+              <Image
+                src={heroAccentBottom}
+                alt="Akustik gitar çalan müzisyen"
+                fill
+                sizes="128px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -180,7 +146,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+      <section className="border-y border-line-soft bg-gradient-to-b from-accent-violet/[0.05] to-transparent">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Neden işe yarar?
+          </h2>
+          <div className="mt-12 grid gap-8 sm:grid-cols-3">
+            {values.map((v) => (
+              <div
+                key={v.title}
+                className="rounded-2xl bg-white/90 p-7 shadow-sm ring-1 ring-line-soft"
+              >
+                <p className="font-display text-lg font-semibold text-accent-coral">
+                  {v.title}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
+                  {v.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-accent-deep via-accent-violet to-accent-coral p-[1px] shadow-xl shadow-[0_24px_48px_-16px_rgba(36,52,52,0.35)]">
           <div className="rounded-[calc(1.5rem-1px)] bg-[#1a2827] px-6 py-12 text-center sm:px-12 sm:py-16">
             <h2 className="font-display mx-auto max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-white sm:text-3xl lg:text-[2rem]">
@@ -202,6 +191,40 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-24 pt-16 sm:px-6 lg:pt-20">
+        <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          Üç boyut
+        </h2>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
+          Mağaza, akademi ve topluluk — aynı marka altında birbirini besleyen
+          üç sütun.
+        </p>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {pillars.map((p) => (
+            <Link
+              key={p.href}
+              href={p.href}
+              className="group flex flex-col rounded-2xl border border-line-soft bg-card p-7 shadow-[0_1px_0_rgba(17,12,34,0.04)] transition hover:-translate-y-0.5 hover:border-line-strong hover:shadow-lg"
+            >
+              <span
+                className={`inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${p.hue} text-base font-bold text-white shadow-md`}
+              >
+                {p.title.slice(0, 1)}
+              </span>
+              <h3 className="font-display mt-5 text-xl font-semibold tracking-tight text-foreground group-hover:text-accent-deep">
+                {p.title}
+              </h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                {p.body}
+              </p>
+              <span className="mt-5 text-sm font-semibold text-accent-violet">
+                İncele →
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
     </main>
