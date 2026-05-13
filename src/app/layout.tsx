@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className="h-full scroll-smooth">
-      <body className="min-h-full flex flex-col font-sans antialiased">
+      <body className="mesh-page bg-page text-foreground min-h-full flex flex-col font-sans antialiased">
         <CartProvider>
           <Header />
           <div className="flex-1">{children}</div>

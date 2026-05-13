@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bash -c 'for p in $(lsof -ti :3000 2>/dev/null); do kill \"$p\" 2>/dev/null; done; sleep 0.5; exec env NEXT_TELEMETRY_DISABLED=1 next dev --webpack'",
+    "dev": "bash -c 'pkill -f \"next dev\" >/dev/null 2>&1 || true; for p in $(lsof -ti :3000 2>/dev/null); do kill -9 \"$p\" 2>/dev/null; done; sleep 0.3; NEXT_TELEMETRY_DISABLED=1 exec next dev --webpack'",
     "dev:turbo": "NEXT_TELEMETRY_DISABLED=1 next dev",
-    "build": "next build",
+    "clean": "rm -rf .next",
+    "dev:fresh": "npm run clean && npm run dev",
+    "port:free": "bash -c 'pkill -f \"next dev\" >/dev/null 2>&1 || true; for p in $(lsof -ti :3000 2>/dev/null); do kill -9 \"$p\" 2>/dev/null; done; echo port-3000-free'",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "vercel:link": "npx vercel@latest link",
+    "vercel:deploy": "npx vercel@latest",
+    "vercel:prod": "npx vercel@latest --prod"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -19,7 +25,7 @@
     "@types/node": "^20",
     "@types/react": "19.2.14",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "eslint": "^9.39.4",
     "eslint-config-next": "16.2.6",
     "postcss": "^8.5.3",
     "tailwindcss": "^4",

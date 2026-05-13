@@ -161,8 +161,9 @@ export default function Home() {
               Öne çıkanlar
             </h2>
             <p className="mt-3 max-w-xl text-base leading-relaxed text-muted">
-              Örnek ilanlar gerçek stok fotoğraflarla; satıcılarınız da aynı
-              netlikte vitrin açabilsin diye tasarlandı.
+              Her ilan kendi ürün kategorisine uygun görsel ve Türkçe açıklama ile
+              vitrinlenir; vitrinde gördüğünüz ürün ile eşleşen detayları ilan
+              sayfasında bulabilirsiniz.
             </p>
           </div>
           <Link

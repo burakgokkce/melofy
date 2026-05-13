@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   return {
     title: `${product.name} — MELOFY`,
-    description: `${product.category} · ${product.price} · ${product.city}`,
+    description: `${product.category} · ${product.price} · ${product.city}. ${product.description.slice(0, 140)}`,
   };
 }
 
@@ -69,12 +69,15 @@ export default async function UrunDetailPage({ params }: Props) {
               </span>
             ))}
           </div>
+          <p className="mt-6 text-sm leading-relaxed text-muted">
+            {product.description}
+          </p>
           <p className="mt-8 text-3xl font-bold tabular-nums tracking-tight text-foreground sm:text-4xl">
             {product.price}
           </p>
-          <p className="mt-6 text-sm leading-relaxed text-muted">
-            Örnek ilan: emanet ödeme ve kargo akışı canlıya alındığında burada satıcı
-            ve teslimat bilgileri görünecek.
+          <p className="mt-4 text-xs text-muted">
+            Fotoğraf stok görseldir; teslimatta seri numarası ve satıcı garanti
+            bilgisi paylaşılacaktır.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <AddToCartButton productId={product.id} />

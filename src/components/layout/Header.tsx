@@ -6,17 +6,14 @@ import { nav } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line-soft bg-white/80 shadow-[0_1px_0_rgba(17,12,34,0.04)] backdrop-blur-xl backdrop-saturate-150">
-      <div className="mx-auto flex min-h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:min-h-[4.5rem] sm:px-6 sm:py-3">
+    <header className="sticky top-0 z-50 border-b border-line-soft bg-[color-mix(in_srgb,var(--color-page)_55%,transparent)] shadow-[0_1px_0_rgba(17,12,34,0.04)] backdrop-blur-xl backdrop-saturate-150">
+      <div className="mx-auto flex min-h-[4.5rem] max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:min-h-[4.75rem] sm:px-6 sm:py-3">
         <Link
           href="/"
-          className="flex min-w-0 flex-col gap-1 rounded-md ring-offset-2 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/30 sm:gap-1.5"
+          className="flex min-w-0 flex-col gap-0.5 rounded-md ring-offset-2 ring-offset-transparent transition hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/30 sm:gap-1"
         >
-          <MelofyLogo
-            priority
-            className="h-10 w-auto max-w-[min(280px,52vw)] shrink-0 sm:h-[3.25rem] sm:max-w-[min(320px,40vw)] lg:h-14 lg:max-w-[360px]"
-          />
-          <SloganTagline variant="header" className="pl-0.5" />
+          <MelofyLogo className="text-[1.7rem] sm:text-[1.95rem] lg:text-[2.2rem]" />
+          <SloganTagline variant="header" className="pl-[0.18em]" />
           <span className="sr-only">MELOFY — ana sayfa</span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-2">

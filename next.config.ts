@@ -18,6 +18,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  /**
+   * iCloud/Desktop’ta ilk webpack derlemesi 4 dk sürebiliyor; tarayıcının chunk
+   * fetch timeout’unu uzatıyoruz ki ChunkLoadError düşmesin.
+   */
+  webpack(config) {
+    config.output = {
+      ...(config.output ?? {}),
+      chunkLoadTimeout: 600_000,
+    };
+    return config;
+  },
 };
 
 export default nextConfig;

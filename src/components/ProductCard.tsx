@@ -34,7 +34,7 @@ export function ProductCard({ product, priorityImage }: Props) {
         <h3 className="font-display text-lg font-semibold leading-snug tracking-tight text-foreground sm:text-xl">
           {product.name}
         </h3>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           {product.tags.map((t) => (
             <span
               key={t}
@@ -44,6 +44,9 @@ export function ProductCard({ product, priorityImage }: Props) {
             </span>
           ))}
         </div>
+        <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-muted">
+          {product.description}
+        </p>
         <div className="mt-auto flex items-end justify-between border-t border-line-soft pt-4">
           <p className="text-lg font-bold tabular-nums tracking-tight text-foreground sm:text-xl">
             {product.price}

@@ -10,9 +10,9 @@ export function Footer() {
         <div>
           <Link
             href="/"
-            className="inline-flex rounded-md ring-offset-2 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/30"
+            className="inline-flex rounded-md ring-offset-2 ring-offset-transparent transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-violet/30"
           >
-            <MelofyLogo className="h-11 w-auto max-w-[280px] sm:h-12 sm:max-w-[300px] lg:h-14 lg:max-w-[340px]" />
+            <MelofyLogo className="text-[2rem] sm:text-[2.2rem] lg:text-[2.4rem]" />
             <span className="sr-only">MELOFY — ana sayfa</span>
           </Link>
           <SloganTagline variant="footer" className="mt-2" />
